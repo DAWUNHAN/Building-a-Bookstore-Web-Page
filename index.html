@@ -1,0 +1,158 @@
+<!--
+File: index.html
+Writer: Dawun Han
+SID: 460 177 643
+Description: Individual Assignment of COMP5347
+-->
+<!DOCTYPE html>
+<html>
+<head lang="en">
+   <meta charset="utf-8">
+   <title>COMP5347 Assignment One</title>
+   <link rel="stylesheet" href="index.css" />
+   <script type="text/javascript" src="index.js"></script>
+</head>
+
+<body>
+<form method="get" action="" id="mainForm">
+<div id="searchBox">
+  <input type="search" name="search" size="30" id="mySearch" onchange="makeYellow(this.value)"/>
+  <input type="submit" class="button" value="search">
+  <select name="Category" id="myCategory" onChange="selectCate(this.options[this.selectedIndex].value)">
+    <option>Category</option>
+     <option value="1">Art</option>
+     <option value="2">Science History</option>
+     <option value="3">Action and Adventure</option>
+     <option value="4">Health</option>
+     <option value="5">Science</option>
+  </select>
+  <input type="submit" class="button" value="filter">
+
+    <input id="numOfCart" size=1 type="text" name="numCart" value="" onfocus="blur()">
+    <img src="images/cart.png" class="cart" width="20" height="20" />
+    <input type="reset" class="cartButton" value="Reset the cart" onclick="resetCart()">
+    <input type="submit" class="cartButton" value="Add to cart" onclick="addCart(this.form)">
+
+
+</div>
+
+<div id="listBox">
+<table id="tableData">
+  <caption>Online Book Store</caption>
+  <thead>
+    <th></th>
+    <th></th>
+    <th>Title</th>
+    <th>Author</th>
+    <th>Year</th>
+    <th>Price</th>
+    <th>Publisher</th>
+    <th>Category</th>
+  </thead>
+  <tbody>
+    <tr id="1">
+      <td><input type="checkbox" name="cc" onclick="check(this)" ></td> <!--check box  -->
+      <td><img src="images/01.jpg" width="45" height="50"/></td> <!--image  -->
+      <td id="title">The Arts: A Visual Encyclopedia</td>
+      <td>DK</td>
+      <td>2017</td>
+      <td>13.99</td>
+      <td>DK Children</td>
+      <td>Art</td>
+    </tr>
+    <tr id="1">
+      <td><input type="checkbox" name="cc" onclick="check(this)" ></td> <!--check box  -->
+      <td><img src="images/11.jpg" width="45" height="50"/></td> <!--image  -->
+      <td id="title">The Lost Art of Reading Nature's Signs: Use Outdoor Clues to Find Your Way, Predict the Weather, Locate Water, Track Animals―and Other Forgotten Skills (Natural Navigation)</td>
+      <td>Tristan Gooley</td>
+      <td>2015</td>
+      <td>11.52</td>
+      <td>The Experiment</td>
+      <td>Art</td>
+    </tr>
+    <tr id="2">
+      <td><input type="checkbox" name="cc" onclick="check(this)"></td> <!--check box  -->
+      <td><img src="images/02.jpg" width="45" height="50"/></td> <!--image  -->
+      <td id="title">The Scientists: A History of Science Told Through the Lives of Its Greatest Inventors</td>
+      <td>John Gribbin</td>
+      <td>2004</td>
+      <td>16.00</td>
+      <td>Random House Trade Paperbacks</td>
+      <td>Science History</td>
+    </tr>
+    <tr id="2">
+      <td><input type="checkbox" name="cc" onclick="check(this)"></td> <!--check box  -->
+      <td><img src="images/22.jpg" width="45" height="50"/></td> <!--image  -->
+      <td id="title">The Invention of Science: A New History of the Scientific Revolution</td>
+      <td>David Wootton</td>
+      <td>2016</td>
+      <td>7.75</td>
+      <td>Harper Perernnial</td>
+      <td>Science History</td>
+    </tr>
+    <tr id="3">
+      <td><input type="checkbox" name="cc" onclick="check(this)"></td> <!--check box  -->
+      <td><img src="images/03.jpg" width="45" height="50"/></td> <!--image  -->
+      <td id="title">The Hunger Games</td>
+      <td>Suzanne Collins</td>
+      <td>2010</td>
+      <td>7.55</td>
+      <td>Scholastic Press</td>
+      <td>Action and Adventure</td>
+    </tr>
+    <tr id="3">
+      <td><input type="checkbox" name="cc" onclick="check(this)"></td> <!--check box  -->
+      <td><img src="images/33.jpg" width="45" height="50"/></td> <!--image  -->
+      <td id="title">Coyote Peterson’s Brave Adventures: Wild Animals in a Wild World</td>
+      <td>Coyote Peterson</td>
+      <td>2017</td>
+      <td>13.44</td>
+      <td>Mango</td>
+      <td>Action and Adventure</td>
+    </tr>
+    <tr id="4">
+      <td><input type="checkbox" name="cc" onclick="check(this)" ></td> <!--check box  -->
+      <td><img src="images/04.jpg" width="45" height="50"/></td> <!--image  -->
+      <td id="title">Dr. A's Habits of Health: The Path to Permanent Weight Control & Optimal Health</td>
+      <td>Wayne cott Anderse</td>
+      <td>2010</td>
+      <td>24.43</td>
+      <td>Habits of Health Press</td>
+      <td>Health</td>
+    </tr>
+    <tr id="4">
+      <td><input type="checkbox" name="cc" onclick="check(this)"></td> <!--check box  -->
+      <td><img src="images/44.jpg" width="45" height="50"/></td> <!--image  -->
+      <td id="title">The New Health Rules: Simple Changes to Achieve Whole-Body Wellness</td>
+      <td>Frank Lipman M.D.</td>
+      <td>2016</td>
+      <td>8.98</td>
+      <td>Artisan</td>
+      <td>Health</td>
+    </tr>
+    <tr id="5">
+      <td><input type="checkbox" name="cc" onclick="check(this)"></td> <!--check box  -->
+      <td><img src="images/05.jpg" width="45" height="50"/></td> <!--image  -->
+      <td id="title">2084</td>
+      <td>Mason Engel</td>
+      <td>2017</td>
+      <td>12.50</td>
+      <td>CreateSpace Independent Publishing Platform</td>
+      <td>Science Fiction</td>
+    </tr>
+    <tr id="5">
+      <td><input type="checkbox" name="cc" onclick="check(this)"></td> <!--check box  -->
+      <td><img src="images/55.jpg" width="45" height="50"/></td> <!--image  -->
+      <td id="title">God's Ground: Compared to the settlement of space, all other forms of human endeavor shrink to insignificance</td>
+      <td>John Brophy</td>
+      <td>2017</td>
+      <td>6.99</td>
+      <td>John R Broph</td>
+      <td>Science Fiction</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</form>
+</body>
+</html>
